@@ -229,7 +229,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
   EventName.startup: {
     ET.PERMANENT: Alert(
       _("Be ready to take over at any time"),
-      _("Do not forget to PRAY!"),
+      _("ULTIMATE DRAGONPILOT BY ARNE SCHWARCK"),
       AlertStatus.normal, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 6.),
   },
