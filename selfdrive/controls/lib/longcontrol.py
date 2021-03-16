@@ -8,7 +8,7 @@ from common.travis_checker import travis
 
 LongCtrlState = log.ControlsState.LongControlState
 
-STOPPING_EGO_SPEED = 0.6
+STOPPING_EGO_SPEED = 0.4
 STOPPING_TARGET_SPEED_OFFSET = 0.01
 STARTING_TARGET_SPEED = 0.7
 BRAKE_THRESHOLD_TO_PID = 0.2
