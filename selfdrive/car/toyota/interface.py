@@ -267,7 +267,7 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.kiBP = [0., 5., 12., 20., 27.]
       ret.longitudinalTuning.kiV = [.35, .23, .20, .17, .1]
       ret.stoppingBrakeRate = 0.15 # reach stopping target smoothly
-      ret.startingBrakeRate = 1.01 # release brakes fast
+      ret.startingBrakeRate = 1.21 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       ret.steerActuatorDelay = 0
       ret.steerLimitTimer = 0.1
@@ -277,7 +277,7 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2,  25, 30.6, 33.3, 36.1]
       ret.lateralTuning.indi.outerLoopGainV = [4.6, 6.4, 8.2, 10, 11.8, 13.6, 14.99, 14.99, 14.99, 14.99]
       ret.lateralTuning.indi.timeConstantBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30.6, 33.3, 36.1]
-      ret.lateralTuning.indi.timeConstantV = [0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.3, 3.6, 3.9]
+      ret.lateralTuning.indi.timeConstantV = [1.1, 1.4, 1.7, 2.0, 2.3, 2.6, 2.9, 3.5, 3.8, 4.1]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [16.7, 25]
       ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15]
 
