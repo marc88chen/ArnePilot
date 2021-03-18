@@ -250,7 +250,7 @@ class DynamicFollow:
 
     if df_profile == PROFILE_LONG:
       y_dist = [1.5, 1.57, 1.65, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.38, 2.46, 2.54, 2.6]  # TRs
-      profile_mod_pos = [0.53, 0.45, 0.25, 0.15]
+      profile_mod_pos = [0.53, 0.45, 0.23, 0.12]
       profile_mod_neg = [1.1, 1.3, 2.0, 2.3]
     elif df_profile == PROFILE_SHORT:  # for in congested traffic
       x_vel = [0.0, 1.892, 3.7432, 5.8632, 8.0727, 10.7301, 14.343, 17.6275, 22.4049, 28.6752, 34.8858, 40.35]
