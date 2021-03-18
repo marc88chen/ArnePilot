@@ -257,7 +257,7 @@ class CarInterface(CarInterfaceBase):
       ret.safetyParam = 56
       ret.wheelbase = 2.68986
       ret.steerRatio = 14.3
-      ret.steerRateCost = 0.4
+      ret.steerRateCost = 0.5
       tire_stiffness_factor = 0.7933
       ret.mass = 3370. * CV.LB_TO_KG + STD_CARGO_KG
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
@@ -270,7 +270,7 @@ class CarInterface(CarInterfaceBase):
       ret.startingBrakeRate = 1.21 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       ret.steerActuatorDelay = 0
-      ret.steerLimitTimer = 0.5
+      ret.steerLimitTimer = 5
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
       ret.lateralTuning.indi.innerLoopGainV = [4.15, 5.55, 6.95, 8.85, 10.0, 12.15, 14.25, 15]
