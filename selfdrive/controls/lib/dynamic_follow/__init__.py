@@ -250,7 +250,7 @@ class DynamicFollow:
 
     if df_profile == PROFILE_LONG:
       y_dist = [1.5, 1.57, 1.65, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.38, 2.46, 2.54, 2.6]  # TRs
-      profile_mod_pos = [0.45, 0.35, 0.23, 0.12]
+      profile_mod_pos = [0.45, 0.35, 0.23, 0.1]
       profile_mod_neg = [1.1, 1.3, 2.0, 2.3]
     elif df_profile == PROFILE_SHORT:  # for in congested traffic
       x_vel = [0.0, 1.892, 3.7432, 5.8632, 8.0727, 10.7301, 14.343, 17.6275, 22.4049, 28.6752, 34.8858, 40.35]
@@ -261,7 +261,7 @@ class DynamicFollow:
       profile_mod_neg = [0.9, 0.6, 0.5, 0.4]
     elif df_profile == PROFILE_NORMAL:  # default to relaxed/stock
       y_dist = [1.4, 1.47, 1.481, 1.421, 1.444, 1.474, 1.516, 1.534, 1.546, 1.568, 1.579, 1.593, 1.614]
-      profile_mod_pos = [1.0, 1.0, 0.8, 0.7]
+      profile_mod_pos = [1.0, 1.0, 0.7, 0.55]
       profile_mod_neg = [1.0] * 4
     else:
       raise Exception('Unknown profile type: {}'.format(df_profile))
