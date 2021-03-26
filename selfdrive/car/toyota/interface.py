@@ -257,7 +257,7 @@ class CarInterface(CarInterfaceBase):
       ret.safetyParam = 56
       ret.wheelbase = 2.68986
       ret.steerRatio = 14.3
-      ret.steerRateCost = 0.5
+      ret.steerRateCost = 0.6
       tire_stiffness_factor = 0.7933
       ret.mass = 3370. * CV.LB_TO_KG + STD_CARGO_KG
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
