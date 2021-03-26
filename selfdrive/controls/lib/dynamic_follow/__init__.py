@@ -234,7 +234,7 @@ class DynamicFollow:
 
   def _get_TR(self):
     x_vel = [0.0, 1.8627, 3.7253, 5.588, 7.4507, 9.3133, 11.5598, 13.645, 22.352, 31.2928, 33.528, 35.7632, 40.2336]  # velocities
-    profile_mod_x = [2.2352, 13.4112, 24.5872, 35.7632]  # profile mod speeds, mph: [5., 30., 55., 80.]
+    profile_mod_x = [1, 2, 8.3, 19.4, 28.4]  # profile mod speeds, mph: [5., 30., 55., 80.]
 
     if self.dp_dynamic_follow == PROFILE_AUTO:  # decide which profile to use, model profile will be updated before this
       # df is 0 = traffic, 1 = relaxed, 2 = roadtrip, 3 = auto
@@ -250,19 +250,19 @@ class DynamicFollow:
 
     if df_profile == PROFILE_LONG:
       y_dist = [1.5, 1.57, 1.65, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.38, 2.46, 2.54, 2.6]  # TRs
-      profile_mod_pos = [0.38, 0.35, 0.23, 0.1]
-      profile_mod_neg = [1.1, 1.3, 2.0, 2.3]
+      profile_mod_pos = [0.2, 0.38, 0.35, 0.23, 0.1]
+      profile_mod_neg = [0.2, 1.1, 1.3, 2.0, 2.3]
     elif df_profile == PROFILE_SHORT:  # for in congested traffic
       x_vel = [0.0, 1.892, 3.7432, 5.8632, 8.0727, 10.7301, 14.343, 17.6275, 22.4049, 28.6752, 34.8858, 40.35]
       # y_dist = [1.3781, 1.3791, 1.3802, 1.3825, 1.3984, 1.4249, 1.4194, 1.3162, 1.1916, 1.0145, 0.9855, 0.9562]  # original
       # y_dist = [1.3781, 1.3791, 1.3112, 1.2442, 1.2306, 1.2112, 1.2775, 1.1977, 1.0963, 0.9435, 0.9067, 0.8749]  # avg. 7.3 ft closer from 18 to 90 mph
       y_dist = [1.0, 1.2, 1.25, 1.05, 1.02, 1.0, 1.0, 1.03, 1.05, 1.0, 0.9765, 0.9856]
-      profile_mod_pos = [1.32, 1.52, 1.52, 1.2]
-      profile_mod_neg = [0.9, 0.6, 0.5, 0.4]
+      profile_mod_pos = [0.2, 1.32, 1.52, 1.52, 1.2]
+      profile_mod_neg = [0.2, 0.9, 0.6, 0.5, 0.4]
     elif df_profile == PROFILE_NORMAL:  # default to relaxed/stock
       y_dist = [1.4, 1.47, 1.481, 1.421, 1.444, 1.474, 1.516, 1.534, 1.546, 1.568, 1.579, 1.593, 1.614]
-      profile_mod_pos = [1.0, 1.1, 0.7, 0.55]
-      profile_mod_neg = [1.0] * 4
+      profile_mod_pos = [0.2, 1.0, 1.1, 0.7, 0.55]
+      profile_mod_neg = [0.0, 1.0, 1.0, 1.0, 1.0]
     else:
       raise Exception('Unknown profile type: {}'.format(df_profile))
 
