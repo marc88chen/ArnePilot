@@ -165,12 +165,12 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
       ret.lateralTuning.indi.innerLoopGainV = [4.15, 5.55, 7, 8.9, 10.0, 12.15, 14.25, 15]
-      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 30.3, 33.6]
-      ret.lateralTuning.indi.outerLoopGainV = [3.6, 4.9, 6.15, 7.5, 10, 11.2, 15, 16, 17, 17]
-      ret.lateralTuning.indi.timeConstantBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 28.4, 33.6]
-      ret.lateralTuning.indi.timeConstantV = [0.46, 0.62, 0.77, 0.93, 1.1, 3.1, 4.0, 6.0, 7.0, 8.0]
+      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 30.3]
+      ret.lateralTuning.indi.outerLoopGainV = [4.1, 5.4, 6.8, 8.5, 9.8, 12, 15, 16, 17]
+      ret.lateralTuning.indi.timeConstantBP = [18, 22.2, 25, 26, 28.4, 33.6]
+      ret.lateralTuning.indi.timeConstantV = [1, 3.1, 4.0, 6.0, 7.0, 8.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [4.15, 5.55, 7, 8.9, 10.0, 12.15, 14.25, 15]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [4.3, 5.7, 7.2, 9.1, 10.2, 12.35, 14.45, 15]
 
     elif candidate == CAR.LEXUS_RXH:
       stop_and_go = True
@@ -274,12 +274,12 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
       ret.lateralTuning.indi.innerLoopGainV = [4.15, 5.55, 7, 8.9, 10.0, 12.15, 14.25, 15]
-      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 30.3, 33.6]
-      ret.lateralTuning.indi.outerLoopGainV = [3.6, 4.9, 6.15, 7.5, 10, 11.2, 15, 16, 17, 17]
-      ret.lateralTuning.indi.timeConstantBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 28.4, 33.6]
-      ret.lateralTuning.indi.timeConstantV = [0.46, 0.62, 0.77, 0.93, 1.1, 3.1, 4.0, 6.0, 7.0, 8.0]
+      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 30.3]
+      ret.lateralTuning.indi.outerLoopGainV = [4.1, 5.4, 6.8, 8.5, 9.8, 12, 15, 16, 17]
+      ret.lateralTuning.indi.timeConstantBP = [18, 22.2, 25, 26, 28.4, 33.6]
+      ret.lateralTuning.indi.timeConstantV = [1, 3.1, 4.0, 6.0, 7.0, 8.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [4.15, 5.55, 7, 8.9, 10.0, 12.15, 14.25, 15]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [4.3, 5.7, 7.2, 9.1, 10.2, 12.35, 14.45, 15]
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
@@ -303,12 +303,12 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
       ret.lateralTuning.indi.innerLoopGainV = [4.15, 5.55, 7, 8.9, 10.0, 12.15, 14.25, 15]
-      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 30.3, 33.6]
-      ret.lateralTuning.indi.outerLoopGainV = [3.6, 4.9, 6.15, 7.5, 10, 11.2, 15, 16, 17, 17]
-      ret.lateralTuning.indi.timeConstantBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 28.4, 33.6]
-      ret.lateralTuning.indi.timeConstantV = [0.46, 0.62, 0.77, 0.93, 1.1, 3.1, 4.0, 6.0, 7.0, 8.0]
+      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26, 30.3]
+      ret.lateralTuning.indi.outerLoopGainV = [4.1, 5.4, 6.8, 8.5, 9.8, 12, 15, 16, 17]
+      ret.lateralTuning.indi.timeConstantBP = [18, 22.2, 25, 26, 28.4, 33.6]
+      ret.lateralTuning.indi.timeConstantV = [1, 3.1, 4.0, 6.0, 7.0, 8.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 26]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [4.15, 5.55, 7, 8.9, 10.0, 12.15, 14.25, 15]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [4.3, 5.7, 7.2, 9.1, 10.2, 12.35, 14.45, 15]
 
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
