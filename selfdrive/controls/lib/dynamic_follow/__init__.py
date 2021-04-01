@@ -288,7 +288,7 @@ class DynamicFollow:
     TR_mods = []
     # Dynamic follow modifications (the secret sauce)
     x = [-26.8224, -20.0288, -15.6871, -11.1965, -7.8645, -4.9472, -3.0541, -2.2244, -1.5045, -0.7908, -0.3196, 0.0, 0.5588, 1.3682, 1.898, 2.7316, 4.4704]  # relative velocity values
-    y = [1.0, 0.9, 0.8, 0.65, 0.5, 0.4, 0.24, 0.16, 0.09, 0.062, 0.055, 0.05, -0.05648, -0.0792, -0.15675, -0.23289, -0.315]  # modification values
+    y = [3.0, 2.6, 2.2, 1.6, 0.8, 0.4, 0.24, 0.16, 0.09, 0.062, 0.055, 0.05, -0.05648, -0.0792, -0.15675, -0.23289, -0.315]  # modification values
     TR_mods.append(interp(self.lead_data.v_lead - self.car_data.v_ego, x, y))
 
     x = [-4.4795, -2.8122, -1.5727, -1.1129, -0.6611, -0.2692, 0.0, 0.1466, 0.5144, 0.6903, 0.9302]  # lead acceleration values
