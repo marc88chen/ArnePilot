@@ -210,7 +210,7 @@ managed_processes = {
   "updated": "selfdrive.updated",
   "dmonitoringmodeld": ("selfdrive/modeld", ["./dmonitoringmodeld"]),
   "modeld": ("selfdrive/modeld", ["./modeld"]),
-  "mapd": ("selfdrive/mapd", ["./mapd.py"]),
+  #"mapd": ("selfdrive/mapd", ["./mapd.py"]),
   "rtshield": "selfdrive.rtshield",
   "systemd": "selfdrive.dragonpilot.systemd",
   "appd": "selfdrive.dragonpilot.appd",
