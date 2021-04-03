@@ -279,7 +279,7 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.indi.timeConstantBP = [18, 22.2, 30.09, 30.1]
       ret.lateralTuning.indi.timeConstantV = [1, 3.0, 3.0, 6.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [7.7, 9.8, 12, 14, 15, 15, 15]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [7.7, 9.8, 11.6, 13.4, 15, 15, 15]
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
