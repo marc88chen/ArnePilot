@@ -262,7 +262,7 @@ class DynamicFollow:
     elif df_profile == PROFILE_NORMAL:  # default to relaxed/stock
       y_dist = [1.47, 1.48, 1.49, 1.474, 1.474, 1.474, 1.516, 1.534, 1.546, 1.568, 1.579, 1.593, 1.614]
       profile_mod_pos = [0.085, 0.3, 0.9, 1.0, 1.1, 0.7, 0.63, 0.55]
-      profile_mod_neg = [0.6, 0.7, 0.8, 1.0, 1.0, 1.0, 1.0]
+      profile_mod_neg = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.0]
     else:
       raise Exception('Unknown profile type: {}'.format(df_profile))
 
