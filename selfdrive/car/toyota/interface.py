@@ -302,14 +302,14 @@ class CarInterface(CarInterfaceBase):
       ret.steerActuatorDelay = 0
       ret.steerLimitTimer = 1
       ret.lateralTuning.init('indi')
-      ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.innerLoopGainV = [6.4, 8.2, 10, 12, 13.8, 15, 15, 15] # optimal centering values for curving
-      ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 28.4, 30.3]
-      ret.lateralTuning.indi.outerLoopGainV = [3.0, 4.6, 6.35, 8.1, 9.85, 11.7, 13.6, 15.4, 17.2, 19] # optimal centering values for curving; last 3 values for smoother ALC and solid lane centering
-      ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1]
-      ret.lateralTuning.indi.timeConstantV = [0.33, 0.44, 0.55, 0.66, 0.88, 1.3, 3.0, 3.0, 6.0] # optimized course plotting for low speed curves; high last value produces smoother ALC and ride quality
-      ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [6.4, 8.0, 9.6, 11.6, 13.4, 15, 15, 15] # balance between high angle curving and rocking
+      ret.lateralTuning.indi.innerLoopGainBP = [16.7, 25]
+      ret.lateralTuning.indi.innerLoopGainV = [15, 15]
+      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30.1, 33.3, 36.1]
+      ret.lateralTuning.indi.outerLoopGainV = [4.6, 6.2, 8.3, 10.4, 12.8, 14.99, 16, 17, 18, 19]
+      ret.lateralTuning.indi.timeConstantBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30.1, 33.3, 36.1]
+      ret.lateralTuning.indi.timeConstantV = [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.0, 4.0, 4.0]
+      ret.lateralTuning.indi.actuatorEffectivenessBP = [16.7, 25]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15]
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
       stop_and_go = True
