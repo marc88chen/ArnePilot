@@ -271,23 +271,23 @@ class CarInterface(CarInterfaceBase):
       ret.startingBrakeRate = 1.21 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       ret.steerActuatorDelay = 0
-      ret.steerLimitTimer = 1
+      ret.steerLimitTimer = 5
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.innerLoopGainV = [6.4, 8.2, 10, 12, 13.8, 15, 15, 15]
-      ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 28.4, 30.3]
-      ret.lateralTuning.indi.outerLoopGainV = [3.02, 4.62, 6.37, 8.12, 9.87, 11.72, 13.62, 15.4, 17.2, 19]
-      ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1, 33.3, 36.7, 40]
-      ret.lateralTuning.indi.timeConstantV = [0.31, 0.42, 0.63, 0.85, 1, 1.3, 3.0, 3.0, 6.0, 7.0, 8.0, 9.0]
+      ret.lateralTuning.indi.innerLoopGainV = [4.2, 5.8, 7.55, 9.3, 11.1, 12.9, 14.7, 15]
+      ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
+      ret.lateralTuning.indi.outerLoopGainV = [3.02, 4.66, 6.32, 8.12, 9.87, 11.72, 13.62, 14.99]
+      ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1, 33.32, 33.33]
+      ret.lateralTuning.indi.timeConstantV = [0.31, 0.42, 0.63, 0.85, 1, 1.3, 3.0, 3.0, 6.5, 6.5, 8.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [4.2, 5.8, 7.55, 9.3, 11.1, 12.9, 14.7, 15]
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
       ret.safetyParam = 56
       ret.wheelbase = 2.68986
-      ret.steerRatio = 14.3
-      ret.steerRateCost = 0.5
+      ret.steerRatio = 13.7
+      ret.steerRateCost = 0.3
       tire_stiffness_factor = 0.7933
       ret.mass = 3370. * CV.LB_TO_KG + STD_CARGO_KG
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
@@ -300,16 +300,16 @@ class CarInterface(CarInterfaceBase):
       ret.startingBrakeRate = 1.21 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       ret.steerActuatorDelay = 0
-      ret.steerLimitTimer = 1
+      ret.steerLimitTimer = 5
       ret.lateralTuning.init('indi')
-      ret.lateralTuning.indi.innerLoopGainBP = [16.7, 25]
-      ret.lateralTuning.indi.innerLoopGainV = [15, 15]
-      ret.lateralTuning.indi.outerLoopGainBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30.1, 33.3, 36.1]
-      ret.lateralTuning.indi.outerLoopGainV = [4.6, 6.2, 8.3, 10.4, 12.8, 14.99, 16, 17, 18, 19]
-      ret.lateralTuning.indi.timeConstantBP = [8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30.1, 33.3, 36.1]
-      ret.lateralTuning.indi.timeConstantV = [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.0, 4.0, 4.0]
-      ret.lateralTuning.indi.actuatorEffectivenessBP = [16.7, 25]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15]
+      ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
+      ret.lateralTuning.indi.innerLoopGainV = [4.2, 5.8, 7.55, 9.3, 11.1, 12.9, 14.7, 15]
+      ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
+      ret.lateralTuning.indi.outerLoopGainV = [3.02, 4.66, 6.32, 8.12, 9.87, 11.72, 13.62, 14.99]
+      ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1, 33.32, 33.33]
+      ret.lateralTuning.indi.timeConstantV = [0.31, 0.42, 0.63, 0.85, 1, 1.3, 3.0, 3.0, 6.5, 6.5, 8.0]
+      ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [4.2, 5.8, 7.55, 9.3, 11.1, 12.9, 14.7, 15]
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
       stop_and_go = True
