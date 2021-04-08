@@ -257,7 +257,7 @@ class CarInterface(CarInterfaceBase):
       stop_and_go = True
       ret.safetyParam = 56
       ret.wheelbase = 2.68986
-      ret.steerRatio = 13.1
+      ret.steerRatio = 13.7
       ret.steerRateCost = 0.3
       tire_stiffness_factor = 0.7933
       ret.mass = 3370. * CV.LB_TO_KG + STD_CARGO_KG
@@ -274,13 +274,13 @@ class CarInterface(CarInterfaceBase):
       ret.steerLimitTimer = 1
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.innerLoopGainV = [6.4, 8.2, 10, 12, 13.8, 15, 15, 15] # optimal centering values for curving
+      ret.lateralTuning.indi.innerLoopGainV = [6.4, 8.2, 10, 12, 13.8, 15.2, 16, 17]
       ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 28.4, 30.3]
-      ret.lateralTuning.indi.outerLoopGainV = [3.0, 4.63, 6.35, 8.1, 9.85, 11.7, 13.6, 15.4, 17.2, 19] # optimal centering values for curving; last 3 values for smoother ALC and solid lane centering
+      ret.lateralTuning.indi.outerLoopGainV = [3.0, 4.63, 6.35, 8.1, 9.85, 11.7, 13.6, 15.4, 17.2, 19]
       ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1]
-      ret.lateralTuning.indi.timeConstantV = [0.3, 0.41, 0.62, 0.83, 1, 1.3, 3.0, 3.0, 6.0] # optimized course plotting for low speed curves; high last value produces smoother ALC and ride quality
+      ret.lateralTuning.indi.timeConstantV = [0.31, 0.42, 0.63, 0.85, 1, 1.3, 3.0, 3.0, 6.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [17, 17, 17, 17, 17, 17, 17, 17] # balance between high angle curving and rocking
+      ret.lateralTuning.indi.actuatorEffectivenessV = [17, 17, 17, 17, 17, 17, 17, 17]
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
