@@ -275,13 +275,13 @@ class CarInterface(CarInterfaceBase):
       ret.steerLimitTimer = 5
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.innerLoopGainV = [3.5, 5.1, 7.55, 9.3, 11.1, 12.4, 14.2, 15]
+      ret.lateralTuning.indi.innerLoopGainV = [3.05, 5.0, 7.55, 9.3, 10.5, 12, 14, 15]
       ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30, 36]
       ret.lateralTuning.indi.outerLoopGainV = [3.05, 4.66, 6.32, 8.12, 9.87, 11.72, 13.62, 14.99, 16, 18]
       ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1, 33.32, 33.33]
       ret.lateralTuning.indi.timeConstantV = [0.31, 0.46, 0.62, 0.84, 0.97, 1.2, 3.0, 3.0, 6.5, 6.5, 8.0]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [3.5, 5.1, 7.55, 9.3, 11.1, 12.4, 14.2, 15]
+      ret.lateralTuning.indi.actuatorEffectivenessV = [3.05, 5.0, 7.55, 9.3, 10.5, 12, 14, 15]
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
