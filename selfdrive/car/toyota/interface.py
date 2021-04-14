@@ -284,11 +284,11 @@ class CarInterface(CarInterfaceBase):
       if spairrowtuning:
         ret.lateralTuning.init('indi')
         ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
-        ret.lateralTuning.indi.innerLoopGainV = [4, 5.6, 7.4, 9.2, 11, 12.8, 14.6, 15]
+        ret.lateralTuning.indi.innerLoopGainV = [4, 5.5, 7.3, 9.1, 10.9, 12.8, 14.5, 15]
         ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30, 36]
-        ret.lateralTuning.indi.outerLoopGainV = [4, 4.5, 6.3, 8.1, 9.9, 11.7, 13.5, 15.3, 16, 17]
+        ret.lateralTuning.indi.outerLoopGainV = [4, 4.55, 6.35, 8.15, 9.95, 11.75, 13.55, 15.35, 16, 17]
         ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1, 33.32, 33.33]
-        ret.lateralTuning.indi.timeConstantV = [0.46, 0.46, 0.57, 0.7, 0.91, 1.25, 4.5, 4.5, 6.5, 6.5, 8.0]
+        ret.lateralTuning.indi.timeConstantV = [1, 0.46, 0.57, 0.7, 0.91, 1.25, 3.0, 4.5, 6.5, 6.5, 8.0]
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
       else:
