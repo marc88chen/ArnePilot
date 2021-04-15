@@ -283,12 +283,12 @@ class CarInterface(CarInterfaceBase):
       ret.steerLimitTimer = 5
       if spairrowtuning:
         ret.lateralTuning.init('indi')
-        ret.lateralTuning.indi.innerLoopGainBP = [5.5, 25]
-        ret.lateralTuning.indi.innerLoopGainV = [15, 15]
+        ret.lateralTuning.indi.innerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 25]
+        ret.lateralTuning.indi.innerLoopGainV = [12, 13, 14, 15, 15]
         ret.lateralTuning.indi.outerLoopGainBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25, 30, 36]
-        ret.lateralTuning.indi.outerLoopGainV = [4.2, 4.6, 6.375, 8.16, 9.96, 11.76, 13.66, 14.99, 16, 17]
+        ret.lateralTuning.indi.outerLoopGainV = [4.2, 4.6, 6.375, 8.163, 9.97, 11.76, 13.7, 14.99, 16, 17]
         ret.lateralTuning.indi.timeConstantBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 30.09, 30.1, 33.32, 33.33]
-        ret.lateralTuning.indi.timeConstantV = [1, 0.46, 0.57, 0.7, 0.91, 3.0, 4.5, 4.5, 7.0, 7.0, 8.0]
+        ret.lateralTuning.indi.timeConstantV = [1, 0.475, 0.565, 0.685, 0.807, 4, 4, 4, 7.0, 7.0, 8.0]
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15]
       else:
