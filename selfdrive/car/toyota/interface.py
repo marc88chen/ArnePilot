@@ -231,7 +231,7 @@ class CarInterface(CarInterfaceBase):
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.15], [0.035]]
-      ret.lateralTuning.pid.kf = 0. 00007818594
+      ret.lateralTuning.pid.kf = 0.00007818594
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
