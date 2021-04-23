@@ -230,8 +230,8 @@ class CarInterface(CarInterfaceBase):
       ret.stoppingBrakeRate = 0.14 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3], [0.05]]
-      ret.lateralTuning.pid.kf = 0.000068639455
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6], [0.05]]
+      ret.lateralTuning.pid.kf = 0.00007818594]
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
@@ -250,8 +250,8 @@ class CarInterface(CarInterfaceBase):
       ret.stoppingBrakeRate = 0.14 # reach stopping target smoothly
       ret.startingBrakeRate = 1.21 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3], [0.05]]
-      ret.lateralTuning.pid.kf = 0.00004
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6], [0.1]]
+      ret.lateralTuning.pid.kf = 0.00007818594]
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
       stop_and_go = True
