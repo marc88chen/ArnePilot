@@ -230,7 +230,7 @@ class CarInterface(CarInterfaceBase):
       ret.stoppingBrakeRate = 0.12 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6], [0.08]]
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6], [0.1]]
       ret.lateralTuning.pid.kf = 0.00007818594
 
     elif candidate == CAR.RAV4H_TSS2:
