@@ -230,8 +230,15 @@ class CarInterface(CarInterfaceBase):
       ret.stoppingBrakeRate = 0.12 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3], [0.03]]
-      ret.lateralTuning.pid.kf = 0.00007818594
+      ret.lateralTuning.init('pid')
+      ret.lateralTuning.pid.kiBP =  [0, 11, 17, 25, 40]
+      ret.lateralTuning.pid.kpBP =  [0, 11, 17, 25, 40]
+      ret.lateralTuning.pid.kfBP = [0, 11, 17, 25, 40]
+      ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.3, 0.2]
+      ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.1, 0.05, 0.02]
+      ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.00007818594, 0.00006, 0.00004]
+      ret.lateralTuning.pid.kdV = [2.0]
+      ret.lateralTuning.pid.newKfTuned = False
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
