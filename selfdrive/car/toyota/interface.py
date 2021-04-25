@@ -224,20 +224,20 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
       ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
-      ret.longitudinalTuning.kpV = [11, 0.8, 0.4]
+      ret.longitudinalTuning.kpV = [0.92, 0.79, 0.45]
       ret.longitudinalTuning.kiBP = [0., 5., 12., 20., 27.]
       ret.longitudinalTuning.kiV = [.35, .24, .20, .17, .1]
       ret.stoppingBrakeRate = 0.12 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       ret.lateralTuning.init('pid')
-      ret.lateralTuning.pid.kpBP =  [0, 11, 17, 25, 40]
-      ret.lateralTuning.pid.kiBP =  [0, 11, 17, 25, 40]
-      ret.lateralTuning.pid.kfBP = [0, 11, 17, 25, 40]
-      ret.lateralTuning.pid.kdBP = [0, 11, 17, 25, 40]
-      ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.3, 0.2]
-      ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.1, 0.05, 0.02]
-      ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.00007818594, 0.00006, 0.00004]
+      ret.lateralTuning.pid.kiBP = [8, 12, 17, 20, 25, 40]
+      ret.lateralTuning.pid.kpBP = [8, 12, 17, 20, 25, 40]
+      ret.lateralTuning.pid.kfBP = [8, 12, 17, 20, 25, 40]
+      ret.lateralTuning.pid.kdBP = [8, 12, 17, 20, 25, 40]
+      ret.lateralTuning.pid.kiV = [0.6, 0.6, 0.6, 0.6, 0.3, 0.2]
+      ret.lateralTuning.pid.kpV = [0.1, 0.1, 0.1, 0.1, 0.05, 0.01]
+      ret.lateralTuning.pid.kfV = [0.000049546485, 0.00005909297, 0.000068639455, 0.00007818594, 0.00005909297, 0.00004]
       ret.lateralTuning.pid.kdV = [2.0, 2.0, 2.0, 2.0, 2.0]
       ret.lateralTuning.pid.newKfTuned = False
 
