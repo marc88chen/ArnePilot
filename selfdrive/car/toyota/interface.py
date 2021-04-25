@@ -230,18 +230,21 @@ class CarInterface(CarInterfaceBase):
       ret.stoppingBrakeRate = 0.12 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
-      ret.lateralTuning.init('pid')
-      ret.lateralTuning.pid.kiBP = [7, 12, 17, 20, 25, 40]
-      ret.lateralTuning.pid.kpBP = [7, 12, 17, 20, 25, 40]
-      ret.lateralTuning.pid.kfBP = [7, 12, 17, 20, 25, 40]
-      ret.lateralTuning.pid.kdBP = [8, 12, 17, 20, 25, 40]
-      ret.lateralTuning.pid.kiV = [0.6, 0.6, 0.6, 0.6, 0.3, 0.2]
-      ret.lateralTuning.pid.kpV = [0.1, 0.1, 0.1, 0.05, 0.02, 0.01]
-      ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.00007818594, 0.00007818594, 0.000068639455, 0.00004]
+      #ret.lateralTuning.init('pid')
+      #ret.lateralTuning.pid.kiBP = [7, 12, 17, 20, 25, 40]
+      #ret.lateralTuning.pid.kpBP = [7, 12, 17, 20, 25, 40]
+      #ret.lateralTuning.pid.kfBP = [7, 12, 17, 20, 25, 40]
+      #ret.lateralTuning.pid.kdBP = [8, 12, 17, 20, 25, 40]
+      #ret.lateralTuning.pid.kiV = [0.6, 0.6, 0.6, 0.6, 0.3, 0.2]
+      #ret.lateralTuning.pid.kpV = [0.1, 0.1, 0.1, 0.05, 0.02, 0.01]
+      #ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.00007818594, 0.00007818594, 0.000068639455, 0.00004]
       #ret.lateralTuning.pid.kfV = [0.000049546485, 0.00005909297, 0.000068639455, 0.00007818594, 0.00005909297, 0.00004]
       #ret.lateralTuning.pid.kfV = [0.0000734126975, 0.000063866212, 0.000068639455, 0.00007818594, 0.00005909297, 0.00004]
-      ret.lateralTuning.pid.kdV = [0, 0, 0, 0, 0]
-      ret.lateralTuning.pid.newKfTuned = False
+      #ret.lateralTuning.pid.kdV = [0, 0, 0, 0, 0]
+      #ret.lateralTuning.pid.newKfTuned = False
+
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.4], [0.3]]
+      ret.lateralTuning.pid.kf = 0.0000734126975
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
