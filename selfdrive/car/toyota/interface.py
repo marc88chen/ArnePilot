@@ -243,10 +243,10 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
       else:
-        ret.lateralTuning.pid.kpBP = [0.0]
-        ret.lateralTuning.pid.kiBP = [0.0]
-        ret.lateralTuning.pid.kpV = [0.028]
-        ret.lateralTuning.pid.kiV = [0.0012]
+        ret.lateralTuning.pid.kpBP = [8, 13, 18, 23, 40]
+        ret.lateralTuning.pid.kiBP = [8, 13, 18, 23, 40]
+        ret.lateralTuning.pid.kpV = [0.3, 0.15, 0.075, 0.05, 0.028]
+        ret.lateralTuning.pid.kiV = [0.1, 0.05, 0.01, 0.005, 0.0012]
         ret.lateralTuning.pid.kf = 0.000153263811757641 # hardcoded in latcontrol_pid, this does nothing for now
         ret.lateralTuning.pid.newKfTuned = True      
 
