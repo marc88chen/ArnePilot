@@ -248,8 +248,8 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kfBP = [0, 11, 16, 22, 28, 33]
         ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.3, 0.2, 0.15, 0.1]
         ret.lateralTuning.pid.kiV = [0.1, 0.05, 0.05, 0.04, 0.03, 0.02]
-        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00007818594, 0.00006863945, 0.00005909477, 0.000049546485, 0.00004]
-        #ret.lateralTuning.pid.newKfTuned = True      
+        ret.lateralTuning.pid.kfV = [0.0000965265678, 0.00007818594, 0.00006863945, 0.00005909477, 0.000049546485, 0.00004]
+        #ret.lateralTuning.pid.newKfTuned = True   0.000153263811757641
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
