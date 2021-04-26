@@ -243,12 +243,12 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
       else:
-        ret.lateralTuning.pid.kpBP = [0, 11, 16, 22, 28, 33]
-        ret.lateralTuning.pid.kiBP = [0, 11, 16, 22, 28, 33]
-        ret.lateralTuning.pid.kfBP = [0, 11, 16, 22, 28, 33]
-        ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.3, 0.2, 0.15, 0.15]
-        ret.lateralTuning.pid.kiV = [0.1, 0.075, 0.075, 0.05, 0.02, 0.01]
-        ret.lateralTuning.pid.kfV = [0.00001165265678, 0.00007818594, 0.00006863945, 0.00005909477, 0.0004, 0.00004]
+        ret.lateralTuning.pid.kpBP = [0, 11, 16, 19, 22, 28, 33]
+        ret.lateralTuning.pid.kiBP = [0, 11, 16, 19, 22, 28, 33]
+        ret.lateralTuning.pid.kfBP = [0, 11, 16, 19, 22, 28, 33]
+        ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.3, 0.3, 0.2, 0.15, 0.15]
+        ret.lateralTuning.pid.kiV = [0.1, 0.075, 0.075, 0.05, 0.05, 0.02, 0.01]
+        ret.lateralTuning.pid.kfV = [0.00001165265678, 0.00007818594, 0.00007818594, 0.00006863945, 0.00005909477, 0.0004, 0.00004]
         #ret.lateralTuning.pid.newKfTuned = True   0.000153263811757641
 
     elif candidate == CAR.RAV4H_TSS2:
