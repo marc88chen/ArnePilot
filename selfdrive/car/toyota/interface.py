@@ -243,11 +243,11 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
       else:
-        ret.lateralTuning.pid.kpBP = [8, 13, 18, 28, 40]
-        ret.lateralTuning.pid.kiBP = [8, 13, 18, 28, 40]
+        ret.lateralTuning.pid.kpBP = [0, 8, 13, 18, 28, 40]
+        ret.lateralTuning.pid.kiBP = [0, 8, 13, 18, 28, 40]
         #ret.lateralTuning.pid.kfBP = [8, 18, 23, 40]
-        ret.lateralTuning.pid.kpV = [0.6, 0.3, 0.06, 0.006, 0.0006]
-        ret.lateralTuning.pid.kiV = [0.05, 0.025, 0.005, 0.0001, 0.00001]
+        ret.lateralTuning.pid.kpV = [0.6, 0.45, 0.3, 0.06, 0.006, 0.0006]
+        ret.lateralTuning.pid.kiV = [0.1, 0.07, 0.025, 0.005, 0.0001, 0.00001]
         ret.lateralTuning.pid.kf = 0.000153263811757641
         ret.lateralTuning.pid.newKfTuned = True      
 
