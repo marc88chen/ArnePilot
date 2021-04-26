@@ -248,7 +248,7 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kfBP = [0, 8, 13, 18, 23, 40]
         ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.45, 0.3, 0.2, 0.15]
         ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.05, 0.01, 0.005, 0.05]
-        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00007818594, 00005909477, 0.00004]
+        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00007818594, 0.00006863945, 0.00005909477, 0.000049546485, 0.00004]
         #ret.lateralTuning.pid.newKfTuned = True      
 
     elif candidate == CAR.RAV4H_TSS2:
