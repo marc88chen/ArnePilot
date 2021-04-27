@@ -246,8 +246,8 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kpBP = [0, 11, 16, 18, 22, 28, 33]
         ret.lateralTuning.pid.kiBP = [0, 11, 16, 18, 22, 28, 33]
         ret.lateralTuning.pid.kfBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kpV = [0.3, 0.485, 0.485, 0.485, 0.475, 0.3, 0.15]
-        ret.lateralTuning.pid.kiV = [0.05, 0.1, 0.07, 0.07, 0.05, 0.003, 0.002]
+        ret.lateralTuning.pid.kpV = [0.485, 0.485, 0.485, 0.485, 0.475, 0.3, 0.15]
+        ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.08, 0.08, 0.05, 0.003, 0.002]
         ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
         #ret.lateralTuning.pid.newKfTuned = True   0.000153263811757641
 
@@ -283,9 +283,9 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kpBP = [0, 11, 16, 18, 22, 28, 33]
         ret.lateralTuning.pid.kiBP = [0, 11, 16, 18, 22, 28, 33]
         ret.lateralTuning.pid.kfBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.55, 0.45, 0.3, 0.15, 0.15]
-        ret.lateralTuning.pid.kiV = [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
-        ret.lateralTuning.pid.kfV = [0.000080664534, 0.00007818594, 0.000070367346, 0.000062548752, 0.000054730158, 0.00004, 0.00004]
+        ret.lateralTuning.pid.kpV = [0.485, 0.485, 0.485, 0.4, 0.3, 0.15, 0.15]
+        ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.1, 0.1, 0.05, 0.003, 0.002]
+        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
         #ret.lateralTuning.pid.newKfTuned = True   0.000153263811757641
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
