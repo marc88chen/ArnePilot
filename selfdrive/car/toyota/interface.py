@@ -260,7 +260,7 @@ class CarInterface(CarInterfaceBase):
       ret.safetyParam = 73
       ret.wheelbase = 2.68986
       tire_stiffness_factor = 0.7933
-      ret.mass = 3380. * CV.LB_TO_KG + STD_CARGO_KG
+      ret.mass = 3800. * CV.LB_TO_KG + STD_CARGO_KG
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
       ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
@@ -291,9 +291,9 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [0, 8, 16, 22, 28, 33, 40]
             ret.lateralTuning.pid.kiBP = [0, 8, 16, 22, 28, 33, 40]
             ret.lateralTuning.pid.kfBP = [0, 8, 16, 22, 28, 33, 40]
-            ret.lateralTuning.pid.kpV = [0.433, 0.433, 0.433, 0.433, 0.3, 0.15, 0.15]
-            ret.lateralTuning.pid.kiV = [0.09, 0.08, 0.08, 0.08, 0.075, 0.03, 0.02]
-            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
+            ret.lateralTuning.pid.kpV = [0.46, 0.45, 0.44, 0.43, 0.3, 0.15, 0.15]
+            ret.lateralTuning.pid.kiV = [0.12, 0.1, 0.08, 0.06, 0.05, 0.03, 0.02]
+            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004]
             break
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
