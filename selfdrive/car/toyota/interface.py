@@ -252,7 +252,7 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kfBP = [0, 8, 16, 22, 28, 33, 40]
             ret.lateralTuning.pid.kpV = [0.433, 0.433, 0.433, 0.433, 0.3, 0.15, 0.15]
             ret.lateralTuning.pid.kiV = [0.09, 0.08, 0.08, 0.08, 0.075, 0.03, 0.02]
-            ret.lateralTuning.pid.kfV = [0.000136547584, 0. 000136547584, 0. 000136547584, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
+            ret.lateralTuning.pid.kfV = [0.000136547584, 0.000136547584, 0.000136547584, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
             break
 
     elif candidate == CAR.RAV4H_TSS2:
