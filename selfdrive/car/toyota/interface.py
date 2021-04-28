@@ -243,12 +243,17 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
       else:
-        ret.lateralTuning.pid.kpBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kiBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kfBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kpV = [0.45, 0.4, 0.4, 0.4, 0.35, 0.3, 0.15]
-        ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.08, 0.08, 0.05, 0.003, 0.002]
-        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.15], [0.05]]
+        ret.lateralTuning.pid.kfV = [0.00004]
+        for fw in car_fw:
+          if fw.ecu == "eps" and fw.fwVersion == b"8965B42170\x00\x00\x00\x00\x00\x00":
+            ret.lateralTuning.pid.kpBP = [0, 8, 16, 22, 28, 33, 40]
+            ret.lateralTuning.pid.kiBP = [0, 8, 16, 22, 28, 33, 40]
+            ret.lateralTuning.pid.kfBP = [0, 8, 16, 22, 28, 33, 40]
+            ret.lateralTuning.pid.kpV = [0.433, 0.433, 0.433, 0.433, 0.3, 0.15, 0.15]
+            ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.1, 0.1, 0..075, 0.03, 0.02]
+            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
+            break
 
     elif candidate == CAR.RAV4H_TSS2:
       stop_and_go = True
@@ -279,12 +284,17 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.actuatorEffectivenessBP = [5.5, 8.3, 11.1, 13.9, 16.7, 19.4, 22.2, 25]
         ret.lateralTuning.indi.actuatorEffectivenessV = [15, 15, 15, 15, 15, 15, 15, 15]
       else:
-        ret.lateralTuning.pid.kpBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kiBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kfBP = [0, 11, 16, 18, 22, 28, 33]
-        ret.lateralTuning.pid.kpV = [0.45, 0.4, 0.4, 0.4, 0.35, 0.3, 0.15]
-        ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.08, 0.08, 0.05, 0.003, 0.002]
-        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.15], [0.05]]
+        ret.lateralTuning.pid.kfV = [0.00004]
+        for fw in car_fw:
+          if fw.ecu == "eps" and fw.fwVersion == b"8965B42170\x00\x00\x00\x00\x00\x00":
+            ret.lateralTuning.pid.kpBP = [0, 8, 16, 22, 28, 33, 40]
+            ret.lateralTuning.pid.kiBP = [0, 8, 16, 22, 28, 33, 40]
+            ret.lateralTuning.pid.kfBP = [0, 8, 16, 22, 28, 33, 40]
+            ret.lateralTuning.pid.kpV = [0.433, 0.433, 0.433, 0.433, 0.3, 0.15, 0.15]
+            ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.1, 0.1, 0..075, 0.03, 0.02]
+            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.000153263811757641, 0.00007818594, 0.000062548752, 0.000054730158, 0.00004]
+            break
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
       stop_and_go = True
