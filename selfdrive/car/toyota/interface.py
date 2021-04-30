@@ -250,8 +250,8 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [0, 8, 16, 23.6, 24, 33, 40]
             ret.lateralTuning.pid.kiBP = [0, 8, 16, 23.6, 24, 33, 40]
             ret.lateralTuning.pid.kfBP = [0, 8, 16, 23.6, 24, 33, 40]
-            ret.lateralTuning.pid.kpV = [0.6, 0.56, 0.56, 0.56, 0.2, 0.15, 0.15]
-            ret.lateralTuning.pid.kiV = [0.45, 0.44, 0.44, 0.44, 0.03, 0.025, 0.02]
+            ret.lateralTuning.pid.kpV = [0.6, 0.56, 0.56, 0.56, 0.2, 0.15, 0.15] # coupled to ki for best slow speed turns
+            ret.lateralTuning.pid.kiV = [0.45, 0.44, 0.44, 0.44, 0.03, 0.025, 0.02] # best so far
             ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004]
             break
 
