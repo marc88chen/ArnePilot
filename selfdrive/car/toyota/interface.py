@@ -246,11 +246,11 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.15], [0.05]]
         ret.lateralTuning.pid.kfV = [0.00004]
         for fw in car_fw:
-            ret.lateralTuning.pid.kpBP = [0, 23, 40]
-            ret.lateralTuning.pid.kiBP = [0, 23, 40]
+            ret.lateralTuning.pid.kpBP = [0, 23, 23.01, 40]
+            ret.lateralTuning.pid.kiBP = [0, 23, 23.01, 40]
             ret.lateralTuning.pid.kfBP = [0, 23, 40]
-            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.2] # bp turning force for RAV4TSS2 to take on most curves
-            ret.lateralTuning.pid.kiV = [0.55, 0.5, 0.05] # ADP tends to deviate off course, so use lower ki values to remain on course
+            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.3, 0.3] # bp turning force for RAV4TSS2 to take on most curves
+            ret.lateralTuning.pid.kiV = [0.52, 0.52, 0.1, 0.05] # ADP tends to deviate off course, so use lower ki values to remain on course
             ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.00007818594] # curvature
             break
 
