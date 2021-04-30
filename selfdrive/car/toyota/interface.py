@@ -250,9 +250,9 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [0, 8, 16, 23.6, 28, 33, 40]
             ret.lateralTuning.pid.kiBP = [0, 8, 16, 23.6, 28, 33, 40]
             ret.lateralTuning.pid.kfBP = [0, 8, 16, 23.6, 28, 33, 40]
-            ret.lateralTuning.pid.kpV = [0.46, 0.45, 0.44, 0.43, 0.3, 0.15, 0.15]
-            ret.lateralTuning.pid.kiV = [0.12, 0.1, 0.1, 0.1, 0.05, 0.03, 0.02]
-            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004]
+            ret.lateralTuning.pid.kpV = [0.46, 0.45, 0.44, 0.43, 0.3, 0.15, 0.15] # bp turning force for RAV4TSS2 to take on most curves
+            ret.lateralTuning.pid.kiV = [0.12, 0.1, 0.1, 0.1, 0.05, 0.03, 0.02] # ADP tends to deviate off course, so use lower ki values to remain on course
+            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004] # curvature
             break
 
     elif candidate == CAR.RAV4H_TSS2:
@@ -291,9 +291,9 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [0, 8, 16, 23.6, 28, 33, 40]
             ret.lateralTuning.pid.kiBP = [0, 8, 16, 23.6, 28, 33, 40]
             ret.lateralTuning.pid.kfBP = [0, 8, 16, 23.6, 28, 33, 40]
-            ret.lateralTuning.pid.kpV = [0.46, 0.45, 0.44, 0.43, 0.3, 0.15, 0.15]
-            ret.lateralTuning.pid.kiV = [0.12, 0.1, 0.1, 0.1, 0.05, 0.03, 0.02]
-            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004]
+            ret.lateralTuning.pid.kpV = [0.46, 0.45, 0.44, 0.43, 0.3, 0.15, 0.15] # bp turning force for RAV4TSS2 to take on most curves
+            ret.lateralTuning.pid.kiV = [0.12, 0.1, 0.1, 0.1, 0.05, 0.03, 0.02] # ADP tends to deviate off course, so use lower ki values to remain on course
+            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004] # curvature
             break
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
