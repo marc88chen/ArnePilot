@@ -250,9 +250,9 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [0, 8, 16, 23.6, 24, 33, 40]
             ret.lateralTuning.pid.kiBP = [0, 8, 16, 23.6, 24, 33, 40]
             ret.lateralTuning.pid.kfBP = [0, 8, 16, 23.6, 24, 33, 40]
-            ret.lateralTuning.pid.kpV = [0.6, 0.5, 0.5, 0.5, 0.2, 0.15, 0.15] # bp turning force for RAV4TSS2 to take on most curves
-            ret.lateralTuning.pid.kiV = [0.45, 0.44, 0.44, 0.44, 0.03, 0.025, 0.02] # ADP tends to deviate off course, so use lower ki values to remain on course
-            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004] # curvature
+            ret.lateralTuning.pid.kpV = [0.6, 0.5, 0.5, 0.5, 0.2, 0.15, 0.15]
+            ret.lateralTuning.pid.kiV = [0.45, 0.44, 0.44, 0.44, 0.03, 0.025, 0.02]
+            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.00004]
             break
 
     elif candidate == CAR.RAV4H_TSS2:
