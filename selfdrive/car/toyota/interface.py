@@ -247,12 +247,9 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kfV = [0.00004]
         for fw in car_fw:
           if fw.ecu == "eps" and fw.fwVersion == b"8965B42170\x00\x00\x00\x00\x00\x00":
-            ret.lateralTuning.pid.kpBP = [0, 8, 16, 23.6, 24, 33, 40]
-            ret.lateralTuning.pid.kiBP = [0, 8, 16, 23.6, 24, 33, 40]
-            ret.lateralTuning.pid.kfBP = [0, 8, 16, 23.6, 24, 33, 40]
-            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.6, 0.5, 0.4, 0.3] # coupled to ki for best slow speed turns
-            ret.lateralTuning.pid.kiV = [0.55, 0.46, 0.46, 0.46, 0.2, 0.1, 0.05] # best so far
-            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.00013823785, 0.00012822054, 0.00010820324, 0.00007818594, 0.000062548752, 0.000062548752]
+            ret.lateralTuning.pid.kpV = [0.6]
+            ret.lateralTuning.pid.kiV = [0.5]
+            ret.lateralTuning.pid.kfV = [0.000153263811757641]
             break
 
     elif candidate == CAR.RAV4H_TSS2:
