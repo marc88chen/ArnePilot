@@ -223,10 +223,10 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
       ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
-      ret.longitudinalTuning.kpV = [0.93, 0.84, 0.6]
+      ret.longitudinalTuning.kpV = [0.99, 0.88, 0.77]
       ret.longitudinalTuning.kiBP = [0., 5., 12., 20., 27.]
-      ret.longitudinalTuning.kiV = [.27, .21, .19, .17, .1]
-      ret.stoppingBrakeRate = 0.13 # reach stopping target smoothly
+      ret.longitudinalTuning.kiV = [.27, .25, .23, .19, .12]
+      ret.stoppingBrakeRate = 0.10 # reach stopping target smoothly
       ret.startingBrakeRate = 0.85 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       if spairrowtuning:
