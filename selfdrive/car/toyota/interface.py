@@ -290,9 +290,9 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [0, 23.6, 23.61, 40]
             ret.lateralTuning.pid.kiBP = [0, 23.6, 23.61, 40]
             ret.lateralTuning.pid.kfBP = [0, 23, 40]
-            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.6] # power or torque
-            ret.lateralTuning.pid.kiV = [0.6, 0.6, 0.1, 0.025] # trajectory variance
-            ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.00007818594] # curvature
+            ret.lateralTuning.pid.kpV = [1.0, 1.0, 0.6, 0.6] # power or torque
+            ret.lateralTuning.pid.kiV = [1.1, 1.1, 0.1, 0.025] # trajectory variance
+            ret.lateralTuning.pid.kfV = [0.000459791435272923, 0.000459791435272923, 0.00007818594] # curvature
             break
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
@@ -319,9 +319,9 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kpBP = [0, 23, 23.01, 40]
         ret.lateralTuning.pid.kiBP = [0, 23, 23.01, 40]
         ret.lateralTuning.pid.kfBP = [0, 23, 40]
-        ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.6] # power or torque
+        ret.lateralTuning.pid.kpV = [0.6.6, 0.6, 0.6] # power or torque
         ret.lateralTuning.pid.kiV = [0.51, 0.51, 0.2, 0.1] # trajectory variance
-        ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.00007818594] # curvature
+        ret.lateralTuning.pid.kfV = [0.000306527623515, 0.000306527623515, 0.00007818594] # curvature
 
     elif candidate in [CAR.LEXUS_ES_TSS2, CAR.LEXUS_ESH_TSS2]:
       stop_and_go = True
