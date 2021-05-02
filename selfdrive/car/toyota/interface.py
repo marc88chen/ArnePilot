@@ -287,10 +287,10 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kfV = [0.00004]
         for fw in car_fw:
           if fw.ecu == "eps" and fw.fwVersion == b"8965B42170\x00\x00\x00\x00\x00\x00":
-            ret.lateralTuning.pid.kpBP = [0, 23, 23.01, 40]
-            ret.lateralTuning.pid.kiBP = [0, 23, 23.01, 40]
+            ret.lateralTuning.pid.kpBP = [0, 23.6, 23.61, 40]
+            ret.lateralTuning.pid.kiBP = [0, 23.6, 23.61, 40]
             ret.lateralTuning.pid.kfBP = [0, 23, 40]
-            ret.lateralTuning.pid.kpV = [0.7, 0.7, 0.6, 0.6] # power or torque
+            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.6] # power or torque
             ret.lateralTuning.pid.kiV = [0.6, 0.6, 0.1, 0.025] # trajectory variance
             ret.lateralTuning.pid.kfV = [0.000153263811757641, 0.000153263811757641, 0.00007818594] # curvature
             break
