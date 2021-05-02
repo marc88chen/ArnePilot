@@ -319,7 +319,7 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.pid.kpBP = [0, 23, 23.01, 40]
         ret.lateralTuning.pid.kiBP = [0, 23, 23.01, 40]
         ret.lateralTuning.pid.kfBP = [0, 23, 40]
-        ret.lateralTuning.pid.kpV = [0.6.6, 0.6, 0.6] # power or torque
+        ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6, 0.6] # power or torque
         ret.lateralTuning.pid.kiV = [0.51, 0.51, 0.2, 0.1] # trajectory variance
         ret.lateralTuning.pid.kfV = [0.000306527623515, 0.000306527623515, 0.00007818594] # curvature
 
