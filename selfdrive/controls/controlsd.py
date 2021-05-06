@@ -520,9 +520,9 @@ class Controls:
     if len(meta.desirePrediction) and ldw_allowed:
       if self.sm.updated['dragonConf']:
         self.dp_camera_offset = self.sm['dragonConf'].dpCameraOffset * 0.01 if self.sm['dragonConf'].dpCameraOffset != 0 else 0
-      l_lane_change_prob = meta.desirePrediction[Desire.laneChangeLeft - 3]
-      r_lane_change_prob = meta.desirePrediction[Desire.laneChangeRight - 3]
-      l_lane_close = left_lane_visible and (self.sm['pathPlan'].lPoly[3] < (0.5 - self.dp_camera_offset))
+      l_lane_change_prob = meta.desirePrediction[Desire.laneChangeLeft - 4]
+      r_lane_change_prob = meta.desirePrediction[Desire.laneChangeRight - 4]
+      l_lane_close = left_lane_visible and (self.sm['pathPlan'].lPoly[3] < (0.1 - self.dp_camera_offset))
       r_lane_close = right_lane_visible and (self.sm['pathPlan'].rPoly[3] > -(0.1 + self.dp_camera_offset))
 
       CC.hudControl.leftLaneDepart = bool(l_lane_change_prob > LANE_DEPARTURE_THRESHOLD and l_lane_close)
