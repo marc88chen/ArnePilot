@@ -234,7 +234,7 @@ class DynamicFollow:
 
   def _get_TR(self):
     x_vel = [0.0, 0.1, 0.3, 1, 2.78, 5.56, 8.33, 11.11, 13.89, 16.67, 19.44, 22.22, 27.78, 30.56, 33.33, 36.11, 38.89, 41.67]  # velocities [0,  .36, 1.1,  4, 10,    20,     30.....100,     110,     120,     130,    140]
-    profile_mod_x = [0.1, 5.5, 16.7, 22.2, 30.6, 38.9]  # profile mod speeds, kph: [.36, 1.1, 4, 10, 30, 70, 100, 130]
+    profile_mod_x = [0.25, 5.5, 16.7, 22.2, 30.6, 38.9]  # profile mod speeds, kph: [.36, 1.1, 4, 10, 30, 70, 100, 130]
 
     if self.dp_dynamic_follow == PROFILE_AUTO:  # decide which profile to use, model profile will be updated before this
       # df is 0 = close, 1 = normal, 2 = far, 3 = auto
