@@ -226,8 +226,8 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.kpV = [1.2, 0.99, 0.77]
       ret.longitudinalTuning.kiBP = [0., 5., 12., 20., 27.]
       ret.longitudinalTuning.kiV = [.28, .24, .2, .18, .12]
-      ret.stoppingBrakeRate = 0.10 # reach stopping target smoothly
-      ret.startingBrakeRate = 0.81 # release brakes fast
+      ret.stoppingBrakeRate = 0.09 # reach stopping target smoothly
+      ret.startingBrakeRate = 1.0 # release brakes fast
       ret.startAccel = 1.50 # Accelerate from 0 faster
       if spairrowtuning:
         ret.steerRateCost = 1.0
