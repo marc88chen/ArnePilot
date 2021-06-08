@@ -233,11 +233,11 @@ class DynamicFollow:
     return profile_mod_pos, profile_mod_neg, y_dist_new
 
   def _get_TR(self):
-    x_vel = [0.0, 1.8627, 3.7253, 5.588, 7.4507, 9.3133, 11.5598, 13.645, 22.352, 31.2928, 33.528, 35.7632, 40.2336]  # velocities
-    profile_mod_x = [2.2352, 13.4112, 24.5872, 35.7632]  # profile mod speeds, mph: [5., 30., 55., 80.]
+    x_vel = [0.0, 1, 2.78, 5.56, 8.33, 11.11, 13.89, 16.67, 19.44, 22.22, 27.78, 30.56, 33.33, 36.11, 38.89, 41.67]  # velocities [0, 4, 10, 20, 30.....100,  110,  120,  130,  140,  150]
+    profile_mod_x = [5.5, 16.7, 22.2, 30.6, 38.9]  # profile mod speeds, kph: [20, 60, 80, 110, 140]
 
     if self.dp_dynamic_follow == PROFILE_AUTO:  # decide which profile to use, model profile will be updated before this
-      # df is 0 = traffic, 1 = relaxed, 2 = roadtrip, 3 = auto
+      # df is 0 = close, 1 = normal, 2 = far, 3 = auto
       # dp is 0 = off, 1 = short, 2 = normal, 3 = long, 4 = auto
       # if it's model profile, we need to convert it
       if self.model_profile is None:
@@ -249,20 +249,19 @@ class DynamicFollow:
       df_profile = self.dp_dynamic_follow
 
     if df_profile == PROFILE_LONG:
-      y_dist = [1.3978, 1.4132, 1.4318, 1.4536, 1.485, 1.5229, 1.5819, 1.6203, 1.7238, 1.8231, 1.8379, 1.8495, 1.8535]  # TRs
-      profile_mod_pos = [0.92, 0.7, 0.25, 0.15]
-      profile_mod_neg = [1.1, 1.3, 2.0, 2.3]
+      y_dist = [1.38, 1.425, 1.5, 1.6, 1.679, 1.74, 1.792, 1.833, 1.876, 1.92, 2.03, 2.1, 2.19, 2.3, 2.43, 2.6]
+      profile_mod_pos = [0.88, 0.44, 0.33, 0.12, 0.1]
+      profile_mod_neg = [0.6, 0.6, 1.0, 1.1, 1.2]
     elif df_profile == PROFILE_SHORT:  # for in congested traffic
-      x_vel = [0.0, 1.892, 3.7432, 5.8632, 8.0727, 10.7301, 14.343, 17.6275, 22.4049, 28.6752, 34.8858, 40.35]
-      # y_dist = [1.3781, 1.3791, 1.3802, 1.3825, 1.3984, 1.4249, 1.4194, 1.3162, 1.1916, 1.0145, 0.9855, 0.9562]  # original
-      # y_dist = [1.3781, 1.3791, 1.3112, 1.2442, 1.2306, 1.2112, 1.2775, 1.1977, 1.0963, 0.9435, 0.9067, 0.8749]  # avg. 7.3 ft closer from 18 to 90 mph
-      y_dist = [1.3781, 1.3791, 1.3457, 1.3134, 1.3145, 1.318, 1.3485, 1.257, 1.144, 0.979, 0.9461, 0.9156]
-      profile_mod_pos = [1.05, 1.55, 2.6, 3.75]
-      profile_mod_neg = [0.84, .275, 0.1, 0.05]
+      x_vel = [0.0, 1, 2.78, 5.56, 8.33, 11.11, 13.89, 16.67, 19.44, 22.22, 27.78, 30.56, 33.33, 36.11, 38.89, 41.67] 
+      # in kph[0,  .36, 1.1,  4, 10,    20,     30,    40,       50,        60,       70,       80,       90,       100,     110,     120,     130,    140]
+      y_dist = [1.25, 1.255, 1.27, 1.28, 1.29, 1.3, 1.3, 1.3, 1.26, 1.26, 1.295, 1.33, 1.4, 1.5, 1.62, 1.8]
+      profile_mod_pos = [0.9, 1.1, 1.1, 0.9, 0.7]
+      profile_mod_neg = [1.0, 0.95, 0.9, 0.8, 0.7]
     elif df_profile == PROFILE_NORMAL:  # default to relaxed/stock
-      y_dist = [1.385, 1.394, 1.406, 1.421, 1.444, 1.474, 1.516, 1.534, 1.546, 1.568, 1.579, 1.593, 1.614]
-      profile_mod_pos = [1.0] * 4
-      profile_mod_neg = [1.0] * 4
+      y_dist = [1.49, 1.5033, 1.51, 1.5196, 1.5298, 1.5486, 1.5601, 1.5662, 1.5780, 1.5898, 1.617, 1.637, 1.67, 1.72, 1.7981, 1.9]
+      profile_mod_pos = [0.88, 0.88, 0.88, 0.66, 0.4]
+      profile_mod_neg = [0.9, 0.9, 0.9, 0.9, 0.8]
     else:
       raise Exception('Unknown profile type: {}'.format(df_profile))
 
@@ -288,7 +287,7 @@ class DynamicFollow:
     TR_mods = []
     # Dynamic follow modifications (the secret sauce)
     x = [-26.8224, -20.0288, -15.6871, -11.1965, -7.8645, -4.9472, -3.0541, -2.2244, -1.5045, -0.7908, -0.3196, 0.0, 0.5588, 1.3682, 1.898, 2.7316, 4.4704]  # relative velocity values
-    y = [.76, 0.62323, 0.49488, 0.40656, 0.32227, 0.23914, 0.12269, 0.10483, 0.08074, 0.04886, 0.0072, 0.0, -0.05648, -0.0792, -0.15675, -0.23289, -0.315]  # modification values
+    y = [.9, 0.77, 0.623, 0.495, 0.32227, 0.322, 0.239, 0.16, 0.115, 0.085, 0.025, 0.0, -0.056, -0.0792, -0.15675, -0.23289, -0.315]  # modification values
     TR_mods.append(interp(self.lead_data.v_lead - self.car_data.v_ego, x, y))
 
     x = [-4.4795, -2.8122, -1.5727, -1.1129, -0.6611, -0.2692, 0.0, 0.1466, 0.5144, 0.6903, 0.9302]  # lead acceleration values
