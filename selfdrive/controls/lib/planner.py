@@ -62,7 +62,7 @@ _DP_CRUISE_MIN_V_SPORT = [-3.0, -3.0, -2.5, -2.0, -1.5]
 _DP_CRUISE_MIN_V_FOLLOWING = [-3.0, -2.5, -2.0, -1.5, -1.5]
 _DP_CRUISE_MIN_BP = [0.0, 5.0, 10.0, 20.0, 55.0]
 
-_DP_CRUISE_MAX_V = [2.5, 1.6, 1.3, .65, .2]
+_DP_CRUISE_MAX_V = [2.5, 1.6, 1.3, .65, .18]
 _DP_CRUISE_MAX_V_ECO = [2.0, 1.3, 0.85, 0.4, 0.11]
 _DP_CRUISE_MAX_V_SPORT = [3.5, 3.0, 2.5, 2.0, 1.4]
 _DP_CRUISE_MAX_V_FOLLOWING = [3.0, 2.3, 1.4, 0.9, 0.5]
