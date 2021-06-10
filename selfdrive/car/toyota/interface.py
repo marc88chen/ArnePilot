@@ -305,9 +305,9 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpBP = [8, 22, 22.01]
             ret.lateralTuning.pid.kiBP = [8, 22, 22.01]
             ret.lateralTuning.pid.kfBP = [0, 22, 22.01]
-            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.15] # power or torque
-            ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.05] # trajectory variance
-            ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.0004] # curvature
+            ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.6] # power or torque
+            ret.lateralTuning.pid.kiV = [0.183, 0.183, 0.05] # trajectory variance
+            ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.00007818594] # curvature
             break
 
     elif candidate == CAR.RAV4H_TSS2:
@@ -350,6 +350,12 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.15] # power or torque
             ret.lateralTuning.pid.kiV = [0.1, 0.1, 0.05] # trajectory variance
             ret.lateralTuning.pid.kfV = [0.00007818594, 0.00007818594, 0.00004] # curvature
+            #ret.lateralTuning.pid.kpBP = [0, 23.6, 23.61, 40]
+            #ret.lateralTuning.pid.kiBP = [0, 23.6, 23.61, 40]
+            #ret.lateralTuning.pid.kfBP = [0, 23.6, 40]
+            #ret.lateralTuning.pid.kpV = [1.0, 1.0, 0.6, 0.6] # power or torque
+            #ret.lateralTuning.pid.kiV = [0.913, 0.913, 0.1, 0.025] # trajectory variance
+            #ret.lateralTuning.pid.kfV = [0.00031415926535897932384626433832795, 0.0015707963267948966192313216916398, 0.00078539816339744830961566084581988] # curvature
             break
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
