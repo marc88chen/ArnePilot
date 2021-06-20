@@ -233,8 +233,8 @@ class DynamicFollow:
     return profile_mod_pos, profile_mod_neg, y_dist_new
 
   def _get_TR(self):
-    x_vel = [0.0, 1, 2.78, 5.56, 8.33, 11.11, 13.89, 16.67, 19.44, 22.22, 27.78, 30.56, 33.33, 36.11, 38.89, 41.67]  # velocities [0,  4, 10,    20,     30.....100,     110,     120,     130,    140]
-    profile_mod_x = [5.5, 16.7, 22.2, 30.6, 38.9]  # profile mod speeds, kph: [.36, 1.1, 4, 10, 30, 70, 100, 130]
+    x_vel = [0.0, 1, 2.78, 5.56, 8.33, 11.11, 13.89, 16.67, 19.44, 22.22, 27.78, 30.56, 33.33, 36.11, 38.89, 41.67]  # velocities [0, 4, 10, 20, 30.....100,  110,  120,  130,  140,  150]
+    profile_mod_x = [5.5, 16.7, 22.2, 30.6, 38.9]  # profile mod speeds, kph: [20, 60, 80, 110, 140]
 
     if self.dp_dynamic_follow == PROFILE_AUTO:  # decide which profile to use, model profile will be updated before this
       # df is 0 = close, 1 = normal, 2 = far, 3 = auto
@@ -249,18 +249,18 @@ class DynamicFollow:
       df_profile = self.dp_dynamic_follow
 
     if df_profile == PROFILE_LONG:
-      y_dist = [1.45, 1.48, 1.6, 1.651, 1.698, 1.748, 1.792, 1.833, 1.876, 1.92, 2.03, 2.1, 2.19, 2.3, 2.43, 2.6]
-      profile_mod_pos = [0.26, 0.28, 0.3, 0.13, 0.1]
-      profile_mod_neg = [0.6, 0.6, 1.0, 1.1, 1.2]
+      y_dist = [1.3, 1.33, 1.4, 1.5525, 1.685, 1.74, 1.792, 1.833, 1.876, 1.92, 2.03, 2.1, 2.19, 2.3, 2.43, 2.6]
+      profile_mod_pos = [0.55, 0.55, 0.4, 0.1, 0.088]
+      profile_mod_neg = [0.8, 0.64, 1.0, 1.1, 1.2]
     elif df_profile == PROFILE_SHORT:  # for in congested traffic
       x_vel = [0.0, 1, 2.78, 5.56, 8.33, 11.11, 13.89, 16.67, 19.44, 22.22, 27.78, 30.56, 33.33, 36.11, 38.89, 41.67] 
       # in kph[0,  .36, 1.1,  4, 10,    20,     30,    40,       50,        60,       70,       80,       90,       100,     110,     120,     130,    140]
-      y_dist = [1.255, 1.26, 1.27, 1.28, 1.285, 1.29, 1.295, 1.28, 1.26, 1.26, 1.295, 1.33, 1.4, 1.5, 1.62, 1.8]
-      profile_mod_pos = [1.05, 1.1, 1.1, 0.9, 0.7]
+      y_dist = [1.23, 1.235, 1.25, 1.26, 1.27, 1.28, 1.28, 1.28, 1.24, 1.24, 1.275, 1.31, 1.38, 1.48, 1.6, 1.76]
+      profile_mod_pos = [0.9, 1.1, 1.1, 0.9, 0.7]
       profile_mod_neg = [1.0, 0.95, 0.9, 0.8, 0.7]
     elif df_profile == PROFILE_NORMAL:  # default to relaxed/stock
-      y_dist = [1.5, 1.5033, 1.51, 1.5196, 1.5298, 1.5486, 1.5601, 1.5662, 1.5780, 1.5898, 1.617, 1.637, 1.67, 1.72, 1.7981, 1.9]
-      profile_mod_pos = [0.8, 0.8, 0.8, 0.7, 0.5]
+      y_dist = [1.3, 1.405, 1.48, 1.497, 1.5098, 1.523, 1.536, 1.5462, 1.5580, 1.5698, 1.597, 1.617, 1.65, 1.7, 1.7781, 1.88]
+      profile_mod_pos = [0.84, 0.84, 0.84, 0.66, 0.4]
       profile_mod_neg = [0.9, 0.9, 0.9, 0.9, 0.8]
     else:
       raise Exception('Unknown profile type: {}'.format(df_profile))
@@ -291,7 +291,7 @@ class DynamicFollow:
     TR_mods.append(interp(self.lead_data.v_lead - self.car_data.v_ego, x, y))
 
     x = [-4.4795, -2.8122, -1.5727, -1.1129, -0.6611, -0.2692, 0.0, 0.1466, 0.5144, 0.6903, 0.9302]  # lead acceleration values
-    y = [0.64, 0.56, 0.492, 0.3515, 0.2305, 0.1022, -0.03, -0.05, -0.053, -0.069, -0.089]  # modification values
+    y = [0.24, 0.16, 0.092, 0.0515, 0.0305, 0.022, 0.0, -0.0153, -0.042, -0.053, -0.059]  # modification values
     TR_mods.append(interp(self.lead_data.a_lead, x, y))
 
     rel_accel_mod = self._calculate_relative_accel_new()
