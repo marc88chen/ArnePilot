@@ -303,7 +303,7 @@ class CarInterface(CarInterfaceBase):
         for fw in car_fw:
           if fw.ecu == "eps" and fw.fwVersion == b"8965B42170\x00\x00\x00\x00\x00\x00":
             ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[0, 22, 22.01], [0, 22, 22.01]]
-            ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6, 0.6, 0.6], [0.183, 0.183, 0.028]] 
+            ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6, 0.6, 0.6], [0.183, 0.183, 0.001]] 
             ret.lateralTuning.pid.kf = 0.00007818594
             #ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[0., 27.], [0., 27.]]
             #ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3, 0.6], [0.05, 0.03]]
