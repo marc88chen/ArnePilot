@@ -217,7 +217,7 @@ class CarInterface(CarInterfaceBase):
       stop_and_go = True
       ret.safetyParam = 73
       ret.wheelbase = 2.68986
-      ret.steerRatio = 14.3
+      ret.steerRatio = 13.85
       tire_stiffness_factor = 0.7933
       ret.mass = 3370. * CV.LB_TO_KG + STD_CARGO_KG
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
@@ -253,6 +253,7 @@ class CarInterface(CarInterfaceBase):
             ret.lateralTuning.pid.kpV = [0.6, 0.6, 0.25, 0.25] # power or torque
             ret.lateralTuning.pid.kiV = [0.514, 0.514, 0.025, 0.025] # trajectory variance
             ret.lateralTuning.pid.kfV = [0.0000785398163397448, 0.0000785398163397448, 0.00004] # curvature
+            ret.steerRateCost = 1.0
             #ret.lateralTuning.pid.kpBP = [0, 23.6, 23.61, 40]
             #ret.lateralTuning.pid.kiBP = [0, 23.6, 23.61, 40]
             #ret.lateralTuning.pid.kfBP = [0, 23.6, 40]
